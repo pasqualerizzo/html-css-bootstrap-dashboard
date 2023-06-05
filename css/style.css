@@ -3,7 +3,7 @@
 @import "colors.css";
 
 /* Home */
-.container {
+.my-container {
     max-width: 1170px;
     margin: 0 auto;
 }
