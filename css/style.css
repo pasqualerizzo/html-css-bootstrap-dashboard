@@ -16,11 +16,80 @@
 /* Fine Header */
 
 /* Main */
+
 #main-section {
     height: calc(100vh - 70px);
 }
-/* Fine Main */
 
+aside {
+    min-width: 100px;
+    background-image: url(../img/sidebar-bg.png);
+    background-color: #051e34;
+}
+
+aside nav ul li {
+    list-style: none;
+}
+
+aside nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.badge {
+    font-size: 12px;
+    background-color: rgba(0, 0, 255, 0.601);
+}
+
+tbody tr th span {
+    font-size: larger;
+    background: orangered;
+    display: inline-block;
+    border-radius: 100%;
+    padding: 4px;
+    vertical-align: middle;
+    margin-left: 2px;
+    margin-right: 5px;
+}
+
+#table-class{
+    border: 0.5px solid lightgray;
+}
+
+#prossime {
+    background-color: rgba(237, 235, 235, 0.904);
+}
+
+.accordion {
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
+}
+
+.graph {
+    background-color: white;
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
+}
+
+.graph .stats {
+    background-color: white;
+    border: 0.5px solid lightgray;
+    border-radius: 7px;
+}
+
+.graph .stats hr{
+    height: 2px;
+    color: black;
+    background-color: black;
+    width: 100%;
+}
+
+.graph img {
+    width: 100%;
+}
+
+
+/* Fine Main */
 
 
 
