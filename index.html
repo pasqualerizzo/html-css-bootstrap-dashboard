@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Starter</title>
+    <title>Boolean CRM</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
@@ -23,7 +24,7 @@
 <body>
 
     <header class="overflow-hidden">
-        <div class="row p-3">
+        <div class="row p-3 align-items-center">
             <div class="col-auto">
                 <a href="">
                     <img src="./img/logo.svg" alt="">
@@ -35,9 +36,30 @@
                 </form>
             </div>
             <div class="col-auto">
-                <a href="">
-                    <img src="./img/logo.svg" alt="">
-                </a>
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-list" style="color: #878787;"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-circle-question" style="color: #878787;"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-ellipsis-vertical" style="color: #878787;"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-bell" style="color: #f08247;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
@@ -49,8 +71,7 @@
                     <li class="mb-1 p-2">
                         <a href="#">
                             <span>
-                                <i class="fa-solid fa-house" style="color: #ffffff;"></i>
-                                
+                                <i class="fa-solid fa-house" style="color: #ffffff;"></i> 
                             </span>
                             Home
                         </a>
@@ -108,19 +129,72 @@
                             <h4>125</h4>
                         </div>
                         <div class="col-lg-2 text-white">
-                            <span class="fw-normal">Nuovo Studente</span>
-                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                                +
+                            <span class="studente fw-normal">Nuovo Studente</span>
+                            <button class="button btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
                             </button>
                             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                             <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasRightLabel">
-                                Offcanvas right
+                                Inserisci un Nuovo Studente
                             </h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
                             </button>
                             </div>
                             <div class="offcanvas-body">
+                                <form class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="inputEmail4" class="form-label">Nome</label>
+                                        <input type="nome" class="form-control" id="inputEmail4">
+                                      </div>
+                                      <div class="col-md-6">
+                                        <label for="inputEmail4" class="form-label">Cognome</label>
+                                        <input type="cognome" class="form-control" id="inputEmail4">
+                                      </div>
+                                    <div class="col-md-6">
+                                      <label for="inputEmail4" class="form-label">Email</label>
+                                      <input type="email" class="form-control" id="inputEmail4">
+                                    </div>
+                                    <div class="col-md-6">
+                                      <label for="inputPassword4" class="form-label">Password</label>
+                                      <input type="password" class="form-control" id="inputPassword4">
+                                    </div>
+                                    <div class="col-12">
+                                      <label for="inputAddress" class="form-label">Indirizzo</label>
+                                      <input type="text" class="form-control" id="inputAddress" placeholder="">
+                                    </div>
+                                    <div class="col-md-6">
+                                      <label for="inputCity" class="form-label">Citta</label>
+                                      <input type="text" class="form-control" id="inputCity">
+                                    </div>
+                                    <div class="col-md-4">
+                                      <label for="inputState" class="form-label">Stato</label>
+                                      <select id="inputState" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-md-2">
+                                      <label for="inputZip" class="form-label">CAP</label>
+                                      <input type="text" class="form-control" id="inputZip">
+                                    </div>
+                                    <div class="mb-12">
+                                        <label for="formFile" class="form-label">Default file input example</label>
+                                        <input class="form-control" type="file" id="formFile">
+                                      </div>
+                                    <div class="col-12">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                          Seleziona per proseguire
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="col-12">
+                                      <button type="submit" class="btn btn-primary">Salva</button>
+                                      <button type="submit" class="btn btn-warning">Svuota</button>
+                                    </div>
+                                </form>
                             </div>
                             </div>
                         </div>
@@ -131,14 +205,10 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-8">
-                            <section class="mt-3">
-                                <table id="table-class" class="table text-center">
+                            <div class="card mb-3 mt-3">
+                                <h2 class="p-2">Prossime classi</h2>
+                                <table class="mb-0 table text-center">
                                     <thead>
-                                        <tr>
-                                            <th id="prossime" colspan="6" class="text-start p-2 fs-3" scope="col">
-                                                Prossime Classi
-                                            </th>
-                                        </tr>
                                         <tr>
                                             <th colspan="2" class="text-start" scope="col">Nome</th>
                                             <th scope="col">Data inizio</th>
@@ -302,7 +372,7 @@
                                       </tr>
                                     </tbody>
                                   </table>
-                            </section>
+                            </div>
                             <section>
                                 <div class="accordion accordion-flush" id="accordionFlushExample">
                                     <div class="accordion-item">
@@ -340,70 +410,56 @@
                             </section>
                         </div>
                         <div class="col-lg-4">
-                            <section class="mt-3">
-                                <table id="table-class" class="table">
-                                    <thead>
-                                        <tr>
-                                            <th id="prossime" colspan="6" class="text-start p-2 fs-3" scope="col">
-                                                Todo
-                                            </th>
-                                        </tr>
-                                        <td class="p-4 border">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                <label class="form-check-label" for="flexCheckDefault">
-                                                    Kickoff nuove classi
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                                <label class="form-check-label" for="flexCheckChecked">
-                                                    Lezione su Bootstrap 5 in classe #75
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                                <label class="form-check-label" for="flexCheckChecked">
-                                                    Controllare username github studenti
-                                                </label>
-                                            </div>
-                                        </td>
-                                    </thead>
-                                </table>
-                                <div class="graph">
-                                    <div class="stats m-3">
-                                        <img src="./img/stats.jpeg" alt="">
-                                        <h5 class="fs-5 p-2 m-0">Utenti attivi</h5>
-                                        <p class="m-0 p-2">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
-                                        <hr>
-                                        <h6 class="fs-6 m-0 p-2">Gennaio: 1200</h6>
-                                        <hr>
-                                        <h6 class="fs-6 m-0 p-2">Febbraio: 800</h6>
-                                        <hr>
-                                        <h6 class="fs-6 m-0 p-2">Marzo: 1500</h6>
-                                        <hr>
-                                        <h6 class="fs-6 m-0 p-2">
-                                            <a href="#">
-                                                Visualizza teport approfondito
-                                            </a>
-                                        </h6>
+                            <div class="card mb-3 mt-3">
+                                <h2 class="p-2">Todo</h2>
+                                <div class="checklist m-3 p-1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Kickoff nuove classi
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Lezione su Bootstrap 5 in classe #75
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Controllare username github studenti
+                                        </label>
                                     </div>
                                 </div>
-                            </section>
+                            </div>
+
+                            <div class="graph">
+                                <div class="stats m-3">
+                                    <img src="./img/stats.jpeg" alt="">
+                                    <h5 class="fs-5 p-2 m-0">Utenti attivi</h5>
+                                    <p class="m-0 p-2">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                                    <hr>
+                                    <h6 class="fs-6 m-0 p-2">Gennaio: 1200</h6>
+                                    <hr>
+                                    <h6 class="fs-6 m-0 p-2">Febbraio: 800</h6>
+                                    <hr>
+                                    <h6 class="fs-6 m-0 p-2">Marzo: 1500</h6>
+                                    <hr>
+                                    <h6 class="fs-6 m-0 p-2">
+                                        <a href="#">
+                                            Visualizza teport approfondito
+                                        </a>
+                                    </h6>
+                                </div>
+                            </div>
+                           
                         </div>
                     </div>
                 </div>
             </section>
         </main>
     </section>
-
-
-    <footer>
-
-    </footer>
-
-
-
-    
 </body>
 </html>
+

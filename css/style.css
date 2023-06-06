@@ -13,6 +13,26 @@
     background-color: lightgrey;
 }
 
+.menu {
+    display: inline;
+}
+
+.menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    display: inline;
+    list-style: none;
+    margin-left: 15px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 19.2px;
+}
+
 /* Fine Header */
 
 /* Main */
@@ -52,9 +72,6 @@ tbody tr th span {
     margin-right: 5px;
 }
 
-#table-class{
-    border: 0.5px solid lightgray;
-}
 
 #prossime {
     background-color: rgba(237, 235, 235, 0.904);
@@ -67,13 +84,13 @@ tbody tr th span {
 
 .graph {
     background-color: white;
-    border: 0.5px solid lightgray;
+    border: 1px solid lightgray;
     border-radius: 5px;
 }
 
 .graph .stats {
     background-color: white;
-    border: 0.5px solid lightgray;
+    border: 1px solid lightgray;
     border-radius: 7px;
 }
 
@@ -88,6 +105,31 @@ tbody tr th span {
     width: 100%;
 }
 
+.card {
+    border-radius: 7px;
+}
+
+.card h2 {
+    background-color: rgba(237, 235, 235, 0.904);
+}
+
+.checklist {
+    border: 1px solid lightgray;
+    border-radius: 7px;
+}
+
+.button {
+    border: 1px solid white;
+}
+
+.button i {
+    font-size: 15px;
+}
+
+.studente {
+    margin-right: .5rem;
+}
+
 
 /* Fine Main */
 
@@ -99,12 +141,8 @@ tbody tr th span {
 
 
 
-/* Debug */
 
-/* .debug-aside {
-    width: 100px;
-    background-color: lightcoral;
-} */
+/* Debug */
 
 
 
