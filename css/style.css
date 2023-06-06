@@ -16,37 +16,9 @@
 /* Fine Header */
 
 /* Main */
-main {
-    display: flex;
-}
-
-aside {
-    display: flex;
-    flex-direction: column;
+#main-section {
     height: calc(100vh - 70px);
-    align-items: center;
 }
-
-aside nav ul li {
-    list-style: none;
-}
-
-aside nav ul {
-    padding: 0;
-}
-
-aside nav ul li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-}
-
-.first-section {
-    width: 100%;
-    height: 100%;
-    background-color: #1b72e8;
-}
-
 /* Fine Main */
 
 
@@ -60,10 +32,10 @@ aside nav ul li a {
 
 /* Debug */
 
-.debug-aside {
+/* .debug-aside {
     width: 100px;
     background-color: lightcoral;
-}
+} */
 
 
 
